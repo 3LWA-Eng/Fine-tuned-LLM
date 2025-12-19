@@ -1,0 +1,662 @@
+[
+    {
+        "id": 1,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    cout << \"Hello world!\\n\";\n    return 0;\n}",
+        "output": "This program includes the standard input-output library and prints the message \"Hello world!\" to the console, then terminates successfully."
+    },
+    {
+        "id": 2,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int a = 10, b = 20;\n    int sum = a + b;\n    cout << \"Sum: \" << sum << endl;\n    return 0;\n}",
+        "output": "This program declares two integer variables, adds them together, and displays the result to the console. It demonstrates basic arithmetic operations and output formatting in C++."
+    },
+    {
+        "id": 3,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    for(int i = 1; i <= 5; i++){\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program uses a for loop to iterate from 1 to 5 and prints each number separated by spaces. It demonstrates basic loop control structure in C++."
+    },
+    {
+        "id": 4,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint factorial(int n){\n    if(n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main(){\n    cout << \"Factorial of 5: \" << factorial(5) << endl;\n    return 0;\n}",
+        "output": "This program defines a recursive function to calculate the factorial of a number and calls it with the value 5. It demonstrates recursion and function declaration in C++."
+    },
+    {
+        "id": 5,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {5, 2, 8, 1, 9};\n    int max = arr[0];\n    for(int i = 1; i < 5; i++){\n        if(arr[i] > max) max = arr[i];\n    }\n    cout << \"Maximum: \" << max << endl;\n    return 0;\n}",
+        "output": "This program finds and displays the maximum value in an integer array by iterating through all elements and comparing them. It demonstrates array manipulation and conditional logic in C++."
+    },
+    {
+        "id": 6,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string name;\n    cout << \"Enter your name: \";\n    getline(cin, name);\n    cout << \"Hello, \" << name << \"!\" << endl;\n    return 0;\n}",
+        "output": "This program prompts the user to enter their name, reads the input using getline, and displays a personalized greeting. It demonstrates basic user input handling and string manipulation in C++."
+    },
+    {
+        "id": 7,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num = 17;\n    bool isPrime = true;\n    for(int i = 2; i * i <= num; i++){\n        if(num % i == 0){\n            isPrime = false;\n            break;\n        }\n    }\n    cout << num << (isPrime ? \" is prime\" : \" is not prime\") << endl;\n    return 0;\n}",
+        "output": "This program checks whether the number 17 is prime by testing divisibility from 2 up to its square root. It demonstrates conditional logic, loops, and the ternary operator in C++."
+    },
+    {
+        "id": 8,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Rectangle{\npublic:\n    int width, height;\n    int area(){ return width * height; }\n};\n\nint main(){\n    Rectangle rect;\n    rect.width = 5;\n    rect.height = 3;\n    cout << \"Area: \" << rect.area() << endl;\n    return 0;\n}",
+        "output": "This program defines a Rectangle class with width and height attributes and a method to calculate area, then creates an object and displays its area. It demonstrates basic object-oriented programming concepts including class definition and member functions in C++."
+    },
+    {
+        "id": 9,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 10;\n    int fib1 = 0, fib2 = 1, next;\n    for(int i = 0; i < n; i++){\n        cout << fib1 << \" \";\n        next = fib1 + fib2;\n        fib1 = fib2;\n        fib2 = next;\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program generates and prints the first 10 numbers in the Fibonacci sequence using an iterative approach. It demonstrates loop iteration and variable manipulation to compute sequential values in C++."
+    },
+    {
+        "id": 10,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <algorithm>\nusing namespace std;\n\nint main(){\n    int arr[] = {64, 34, 25, 12, 22};\n    int n = sizeof(arr)/sizeof(arr[0]);\n    sort(arr, arr + n);\n    cout << \"Sorted array: \";\n    for(int i = 0; i < n; i++)\n        cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program sorts an integer array in ascending order using the STL sort function and displays the sorted result. It demonstrates the use of standard library algorithms and array size calculation in C++."
+    },
+    {
+        "id": 11,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num = 12321;\n    int original = num, reversed = 0;\n    while(num > 0){\n        reversed = reversed * 10 + num % 10;\n        num /= 10;\n    }\n    cout << original << (original == reversed ? \" is a palindrome\" : \" is not a palindrome\") << endl;\n    return 0;\n}",
+        "output": "This program checks if a given number is a palindrome by reversing its digits and comparing it with the original. It demonstrates digit manipulation using modulo and integer division operations in C++."
+    },
+    {
+        "id": 12,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nvoid swap(int &a, int &b){\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main(){\n    int x = 5, y = 10;\n    cout << \"Before: x=\" << x << \", y=\" << y << endl;\n    swap(x, y);\n    cout << \"After: x=\" << x << \", y=\" << y << endl;\n    return 0;\n}",
+        "output": "This program demonstrates pass-by-reference by swapping the values of two variables using a custom swap function. It shows how reference parameters allow functions to modify the original variables in C++."
+    },
+    {
+        "id": 13,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    double num = 16.0;\n    cout << \"Square root of \" << num << \" is \" << sqrt(num) << endl;\n    cout << \"2 raised to power 3 is \" << pow(2, 3) << endl;\n    return 0;\n}",
+        "output": "This program uses the cmath library to perform mathematical operations including square root and exponentiation. It demonstrates the use of standard mathematical functions in C++."
+    },
+    {
+        "id": 14,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 5;\n    int sum = 0;\n    for(int i = 1; i <= n; i++){\n        sum += i;\n    }\n    cout << \"Sum of first \" << n << \" natural numbers: \" << sum << endl;\n    return 0;\n}",
+        "output": "This program calculates the sum of the first 5 natural numbers using a for loop. It demonstrates accumulation patterns and basic arithmetic in C++."
+    },
+    {
+        "id": 15,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nenum Day {MON, TUE, WED, THU, FRI, SAT, SUN};\n\nint main(){\n    Day today = WED;\n    if(today == SAT || today == SUN)\n        cout << \"It's weekend!\" << endl;\n    else\n        cout << \"It's a weekday!\" << endl;\n    return 0;\n}",
+        "output": "This program defines an enumeration for days of the week and checks if a given day is a weekend or weekday. It demonstrates the use of enumerations and conditional logic in C++."
+    },
+    {
+        "id": 16,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main(){\n    vector<int> nums = {1, 2, 3, 4, 5};\n    cout << \"Vector elements: \";\n    for(int num : nums){\n        cout << num << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program creates a vector of integers and uses a range-based for loop to iterate and print all elements. It demonstrates the use of STL vectors and modern C++ iteration syntax."
+    },
+    {
+        "id": 17,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 7;\n    for(int i = 1; i <= 10; i++){\n        cout << n << \" x \" << i << \" = \" << n * i << endl;\n    }\n    return 0;\n}",
+        "output": "This program generates and displays the multiplication table for the number 7 from 1 to 10. It demonstrates loop iteration and formatted output in C++."
+    },
+    {
+        "id": 18,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nstruct Student{\n    string name;\n    int age;\n    float gpa;\n};\n\nint main(){\n    Student s1 = {\"Alice\", 20, 3.8};\n    cout << s1.name << \" is \" << s1.age << \" years old with GPA \" << s1.gpa << endl;\n    return 0;\n}",
+        "output": "This program defines a Student structure with name, age, and GPA fields, then creates and displays information about a student. It demonstrates the use of structures for grouping related data in C++."
+    },
+    {
+        "id": 19,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num;\n    cout << \"Enter a number: \";\n    cin >> num;\n    if(num % 2 == 0)\n        cout << num << \" is even\" << endl;\n    else\n        cout << num << \" is odd\" << endl;\n    return 0;\n}",
+        "output": "This program takes an integer input from the user and determines whether it is even or odd using the modulo operator. It demonstrates basic user input, conditional statements, and output in C++."
+    },
+    {
+        "id": 20,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string str = \"Hello\";\n    string reversed(str.rbegin(), str.rend());\n    cout << \"Original: \" << str << endl;\n    cout << \"Reversed: \" << reversed << endl;\n    return 0;\n}",
+        "output": "This program reverses a string using reverse iterators and displays both the original and reversed versions. It demonstrates string manipulation and the use of reverse iterators in C++."
+    },
+    {
+        "id": 21,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    cout << \"Matrix:\" << endl;\n    for(int i = 0; i < 3; i++){\n        for(int j = 0; j < 3; j++)\n            cout << arr[i][j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}",
+        "output": "This program creates a 3x3 matrix and displays it in a formatted grid using nested loops. It demonstrates two-dimensional array initialization and traversal in C++."
+    },
+    {
+        "id": 22,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b){\n    while(b != 0){\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nint main(){\n    cout << \"GCD of 48 and 18: \" << gcd(48, 18) << endl;\n    return 0;\n}",
+        "output": "This program implements the Euclidean algorithm to find the greatest common divisor (GCD) of two numbers. It demonstrates iterative algorithm implementation and function definition in C++."
+    },
+    {
+        "id": 23,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    char grade = 'B';\n    switch(grade){\n        case 'A': cout << \"Excellent!\" << endl; break;\n        case 'B': cout << \"Good job!\" << endl; break;\n        case 'C': cout << \"Fair\" << endl; break;\n        default: cout << \"Invalid grade\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program uses a switch statement to display different messages based on a letter grade. It demonstrates multi-way branching and the switch-case control structure in C++."
+    },
+    {
+        "id": 24,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int *ptr;\n    int num = 42;\n    ptr = &num;\n    cout << \"Value: \" << num << endl;\n    cout << \"Address: \" << ptr << endl;\n    cout << \"Value via pointer: \" << *ptr << endl;\n    return 0;\n}",
+        "output": "This program demonstrates pointer usage by storing the address of a variable and accessing its value through dereferencing. It shows basic pointer declaration, address-of operator, and dereference operator in C++."
+    },
+    {
+        "id": 25,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string text = \"Programming\";\n    int vowels = 0;\n    for(char c : text){\n        c = tolower(c);\n        if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')\n            vowels++;\n    }\n    cout << \"Number of vowels: \" << vowels << endl;\n    return 0;\n}",
+        "output": "This program counts the number of vowels in a given string by iterating through each character and checking against vowel letters. It demonstrates string iteration, character manipulation, and conditional logic in C++."
+    },
+    {
+        "id": 26,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 5;\n    long long fact = 1;\n    for(int i = 1; i <= n; i++){\n        fact *= i;\n    }\n    cout << \"Factorial of \" << n << \" is \" << fact << endl;\n    return 0;\n}",
+        "output": "This program calculates the factorial of 5 using an iterative approach with a for loop. It demonstrates accumulation patterns and the use of long long for handling larger numerical results in C++."
+    },
+    {
+        "id": 27,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Counter{\nprivate:\n    int count;\npublic:\n    Counter() : count(0) {}\n    void increment(){ count++; }\n    int getCount(){ return count; }\n};\n\nint main(){\n    Counter c;\n    c.increment();\n    c.increment();\n    cout << \"Count: \" << c.getCount() << endl;\n    return 0;\n}",
+        "output": "This program defines a Counter class with encapsulated data and methods to increment and retrieve the count value. It demonstrates object-oriented programming principles including encapsulation, constructors, and member functions in C++."
+    },
+    {
+        "id": 28,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num = 153;\n    int sum = 0, temp = num;\n    while(temp > 0){\n        int digit = temp % 10;\n        sum += digit * digit * digit;\n        temp /= 10;\n    }\n    cout << num << (sum == num ? \" is Armstrong\" : \" is not Armstrong\") << endl;\n    return 0;\n}",
+        "output": "This program checks if 153 is an Armstrong number by summing the cubes of its digits and comparing with the original number. It demonstrates digit extraction and mathematical operations in C++."
+    },
+    {
+        "id": 29,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <algorithm>\nusing namespace std;\n\nint main(){\n    int arr[] = {3, 1, 4, 1, 5, 9, 2, 6};\n    int n = sizeof(arr)/sizeof(arr[0]);\n    int minVal = *min_element(arr, arr + n);\n    int maxVal = *max_element(arr, arr + n);\n    cout << \"Min: \" << minVal << \", Max: \" << maxVal << endl;\n    return 0;\n}",
+        "output": "This program finds and displays the minimum and maximum values in an array using STL algorithms. It demonstrates the use of min_element and max_element functions from the algorithm library in C++."
+    },
+    {
+        "id": 30,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 4;\n    for(int i = 1; i <= n; i++){\n        for(int j = 1; j <= i; j++)\n            cout << \"* \";\n        cout << endl;\n    }\n    return 0;\n}",
+        "output": "This program prints a right-angled triangle pattern of asterisks with 4 rows using nested loops. It demonstrates nested loop control and pattern printing in C++."
+    },
+    {
+        "id": 31,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint power(int base, int exp){\n    int result = 1;\n    for(int i = 0; i < exp; i++)\n        result *= base;\n    return result;\n}\n\nint main(){\n    cout << \"2^5 = \" << power(2, 5) << endl;\n    return 0;\n}",
+        "output": "This program calculates the power of a number using an iterative function that multiplies the base by itself for the specified exponent. It demonstrates custom function implementation for mathematical operations in C++."
+    },
+    {
+        "id": 32,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cctype>\nusing namespace std;\n\nint main(){\n    char ch = 'a';\n    cout << \"Original: \" << ch << endl;\n    cout << \"Uppercase: \" << (char)toupper(ch) << endl;\n    cout << \"Is digit: \" << (isdigit(ch) ? \"Yes\" : \"No\") << endl;\n    return 0;\n}",
+        "output": "This program demonstrates character manipulation functions including converting to uppercase and checking if a character is a digit. It shows the use of cctype library functions for character classification and transformation in C++."
+    },
+    {
+        "id": 33,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 10, t1 = 0, t2 = 1, nextTerm;\n    cout << \"First \" << n << \" terms: \" << t1 << \" \" << t2 << \" \";\n    for(int i = 3; i <= n; i++){\n        nextTerm = t1 + t2;\n        cout << nextTerm << \" \";\n        t1 = t2;\n        t2 = nextTerm;\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program generates and displays the first 10 terms of the Fibonacci sequence starting with 0 and 1. It demonstrates iterative sequence generation with variable swapping in C++."
+    },
+    {
+        "id": 34,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    double celsius = 25.0;\n    double fahrenheit = (celsius * 9.0/5.0) + 32.0;\n    cout << celsius << \"C = \" << fahrenheit << \"F\" << endl;\n    return 0;\n}",
+        "output": "This program converts a temperature from Celsius to Fahrenheit using the standard conversion formula. It demonstrates floating-point arithmetic and temperature conversion calculations in C++."
+    },
+    {
+        "id": 35,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nbool isPerfect(int n){\n    int sum = 0;\n    for(int i = 1; i < n; i++)\n        if(n % i == 0) sum += i;\n    return sum == n;\n}\n\nint main(){\n    int num = 28;\n    cout << num << (isPerfect(num) ? \" is perfect\" : \" is not perfect\") << endl;\n    return 0;\n}",
+        "output": "This program checks if a number is a perfect number by calculating the sum of its proper divisors and comparing it with the number itself. It demonstrates divisor finding, function definition, and boolean logic in C++."
+    },
+    {
+        "id": 36,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {1, 2, 3, 4, 5};\n    int sum = 0;\n    for(int i = 0; i < 5; i++)\n        sum += arr[i];\n    double avg = sum / 5.0;\n    cout << \"Average: \" << avg << endl;\n    return 0;\n}",
+        "output": "This program calculates and displays the average of five numbers stored in an array. It demonstrates array traversal, sum accumulation, and floating-point division in C++."
+    },
+    {
+        "id": 37,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string str = \"Hello World\";\n    int length = str.length();\n    cout << \"String: \" << str << endl;\n    cout << \"Length: \" << length << endl;\n    cout << \"First char: \" << str[0] << endl;\n    return 0;\n}",
+        "output": "This program demonstrates basic string operations including getting the length and accessing individual characters by index. It shows string manipulation and member function usage in C++."
+    },
+    {
+        "id": 38,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num = 5;\n    int result = (num > 0) ? num * num : -1;\n    cout << \"Result: \" << result << endl;\n    return 0;\n}",
+        "output": "This program uses the ternary conditional operator to calculate the square of a positive number or return -1 otherwise. It demonstrates the compact conditional expression syntax in C++."
+    },
+    {
+        "id": 39,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nvoid printArray(int arr[], int size){\n    for(int i = 0; i < size; i++)\n        cout << arr[i] << \" \";\n    cout << endl;\n}\n\nint main(){\n    int numbers[] = {10, 20, 30, 40, 50};\n    printArray(numbers, 5);\n    return 0;\n}",
+        "output": "This program defines a function to print all elements of an integer array and calls it from main with a sample array. It demonstrates passing arrays to functions and array traversal in C++."
+    },
+    {
+        "id": 40,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int n = 100;\n    int sum = 0;\n    for(int i = 2; i <= n; i += 2)\n        sum += i;\n    cout << \"Sum of even numbers from 1 to \" << n << \": \" << sum << endl;\n    return 0;\n}",
+        "output": "This program calculates the sum of all even numbers from 1 to 100 using a for loop with an increment of 2. It demonstrates efficient iteration and accumulation patterns in C++."
+    },
+    {
+        "id": 41,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint binarySearch(int arr[], int n, int target){\n    int left = 0, right = n - 1;\n    while(left <= right){\n        int mid = left + (right - left) / 2;\n        if(arr[mid] == target) return mid;\n        if(arr[mid] < target) left = mid + 1;\n        else right = mid - 1;\n    }\n    return -1;\n}\n\nint main(){\n    int arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};\n    cout << \"Index of 23: \" << binarySearch(arr, 10, 23) << endl;\n    return 0;\n}",
+        "output": "This program implements the binary search algorithm to find the index of a target value in a sorted array. It demonstrates efficient searching with O(log n) complexity using iterative divide-and-conquer in C++."
+    },
+    {
+        "id": 42,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = 7;\n    for(int i = 0; i < n-1; i++){\n        for(int j = 0; j < n-i-1; j++){\n            if(arr[j] > arr[j+1]){\n                int temp = arr[j];\n                arr[j] = arr[j+1];\n                arr[j+1] = temp;\n            }\n        }\n    }\n    cout << \"Sorted array: \";\n    for(int i = 0; i < n; i++) cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program implements the bubble sort algorithm to sort an integer array in ascending order by repeatedly swapping adjacent elements. It demonstrates a simple comparison-based sorting technique in C++."
+    },
+    {
+        "id": 43,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <stack>\nusing namespace std;\n\nint main(){\n    stack<int> s;\n    s.push(10);\n    s.push(20);\n    s.push(30);\n    cout << \"Top: \" << s.top() << endl;\n    s.pop();\n    cout << \"After pop, Top: \" << s.top() << endl;\n    cout << \"Size: \" << s.size() << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the use of STL stack container by pushing elements, accessing the top element, and popping. It shows basic stack operations following the Last-In-First-Out (LIFO) principle in C++."
+    },
+    {
+        "id": 44,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main(){\n    queue<string> q;\n    q.push(\"Alice\");\n    q.push(\"Bob\");\n    q.push(\"Charlie\");\n    cout << \"Front: \" << q.front() << endl;\n    q.pop();\n    cout << \"After pop, Front: \" << q.front() << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the use of STL queue container with string elements, showing enqueue and dequeue operations. It illustrates the First-In-First-Out (FIFO) data structure behavior in C++."
+    },
+    {
+        "id": 45,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nstruct Node{\n    int data;\n    Node* next;\n};\n\nint main(){\n    Node* head = new Node{1, nullptr};\n    head->next = new Node{2, nullptr};\n    head->next->next = new Node{3, nullptr};\n    Node* temp = head;\n    while(temp != nullptr){\n        cout << temp->data << \" -> \";\n        temp = temp->next;\n    }\n    cout << \"NULL\" << endl;\n    return 0;\n}",
+        "output": "This program creates a simple singly linked list with three nodes and traverses it to print all elements. It demonstrates basic linked list structure using pointers and dynamic memory allocation in C++."
+    },
+    {
+        "id": 46,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b){\n    if(b == 0) throw runtime_error(\"Division by zero!\");\n    return a / b;\n}\n\nint main(){\n    try{\n        cout << divide(10, 2) << endl;\n        cout << divide(10, 0) << endl;\n    } catch(const runtime_error& e){\n        cout << \"Error: \" << e.what() << endl;\n    }\n    return 0;\n}",
+        "output": "This program demonstrates exception handling by throwing and catching a runtime error when attempting division by zero. It shows the use of try-catch blocks and custom exception messages in C++."
+    },
+    {
+        "id": 47,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <fstream>\n#include <string>\nusing namespace std;\n\nint main(){\n    ifstream file(\"data.txt\");\n    if(file.is_open()){\n        string line;\n        while(getline(file, line)){\n            cout << line << endl;\n        }\n        file.close();\n    } else {\n        cout << \"Unable to open file\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program reads a text file line by line and displays its contents to the console. It demonstrates file input operations using ifstream and proper file handling in C++."
+    },
+    {
+        "id": 48,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main(){\n    ofstream file(\"output.txt\");\n    if(file.is_open()){\n        file << \"Hello, File!\" << endl;\n        file << \"This is line 2.\" << endl;\n        file.close();\n        cout << \"File written successfully.\" << endl;\n    } else {\n        cout << \"Unable to create file\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program creates a text file and writes multiple lines of text to it using ofstream. It demonstrates file output operations and proper file handling practices in C++."
+    },
+    {
+        "id": 49,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT maximum(T a, T b){\n    return (a > b) ? a : b;\n}\n\nint main(){\n    cout << \"Max of 3 and 7: \" << maximum(3, 7) << endl;\n    cout << \"Max of 3.5 and 2.1: \" << maximum(3.5, 2.1) << endl;\n    return 0;\n}",
+        "output": "This program defines a template function to find the maximum of two values that works with any comparable data type. It demonstrates generic programming using function templates in C++."
+    },
+    {
+        "id": 50,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nclass Container{\n    T value;\npublic:\n    Container(T v) : value(v) {}\n    T getValue() { return value; }\n};\n\nint main(){\n    Container<int> intBox(42);\n    Container<string> strBox(\"Hello\");\n    cout << intBox.getValue() << endl;\n    cout << strBox.getValue() << endl;\n    return 0;\n}",
+        "output": "This program defines a template class that can hold a value of any data type and demonstrates its use with both integer and string types. It shows class templates for creating generic containers in C++."
+    },
+    {
+        "id": 51,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Animal{\npublic:\n    string name;\n    void eat(){ cout << name << \" is eating.\" << endl; }\n};\n\nclass Dog : public Animal{\npublic:\n    void bark(){ cout << name << \" is barking!\" << endl; }\n};\n\nint main(){\n    Dog d;\n    d.name = \"Buddy\";\n    d.eat();\n    d.bark();\n    return 0;\n}",
+        "output": "This program demonstrates inheritance by creating a Dog class that inherits from an Animal base class, gaining its properties and adding new behavior. It shows basic class inheritance and method extension in C++."
+    },
+    {
+        "id": 52,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Shape{\npublic:\n    virtual void draw(){ cout << \"Drawing shape\" << endl; }\n};\n\nclass Circle : public Shape{\npublic:\n    void draw() override { cout << \"Drawing circle\" << endl; }\n};\n\nint main(){\n    Shape* s = new Circle();\n    s->draw();\n    delete s;\n    return 0;\n}",
+        "output": "This program demonstrates polymorphism using virtual functions, where a base class pointer calls the derived class's overridden method. It shows runtime polymorphism and the virtual function mechanism in C++."
+    },
+    {
+        "id": 53,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass AbstractShape{\npublic:\n    virtual double area() = 0;\n    virtual void display() = 0;\n};\n\nclass Square : public AbstractShape{\n    double side;\npublic:\n    Square(double s) : side(s) {}\n    double area() override { return side * side; }\n    void display() override { cout << \"Square area: \" << area() << endl; }\n};\n\nint main(){\n    Square sq(5);\n    sq.display();\n    return 0;\n}",
+        "output": "This program defines an abstract base class with pure virtual functions and implements them in a derived Square class. It demonstrates abstract classes and interface-based design in C++."
+    },
+    {
+        "id": 54,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Complex{\n    double real, imag;\npublic:\n    Complex(double r = 0, double i = 0) : real(r), imag(i) {}\n    Complex operator+(const Complex& c){\n        return Complex(real + c.real, imag + c.imag);\n    }\n    void display(){ cout << real << \" + \" << imag << \"i\" << endl; }\n};\n\nint main(){\n    Complex c1(3, 4), c2(1, 2);\n    Complex c3 = c1 + c2;\n    c3.display();\n    return 0;\n}",
+        "output": "This program overloads the + operator to add two complex numbers represented by a Complex class. It demonstrates operator overloading for custom types in C++."
+    },
+    {
+        "id": 55,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nclass MyString{\n    char* str;\npublic:\n    MyString(const char* s){\n        str = new char[strlen(s) + 1];\n        strcpy(str, s);\n    }\n    MyString(const MyString& other){\n        str = new char[strlen(other.str) + 1];\n        strcpy(str, other.str);\n    }\n    void print(){ cout << str << endl; }\n    ~MyString(){ delete[] str; }\n};\n\nint main(){\n    MyString s1(\"Hello\");\n    MyString s2 = s1;\n    s2.print();\n    return 0;\n}",
+        "output": "This program implements a copy constructor to create a deep copy of a dynamically allocated string within a class. It demonstrates proper memory management and the copy constructor pattern in C++."
+    },
+    {
+        "id": 56,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Counter{\n    static int count;\npublic:\n    Counter(){ count++; }\n    static int getCount(){ return count; }\n};\n\nint Counter::count = 0;\n\nint main(){\n    Counter c1, c2, c3;\n    cout << \"Objects created: \" << Counter::getCount() << endl;\n    return 0;\n}",
+        "output": "This program uses a static member variable to count the number of objects created from a class. It demonstrates static members and their initialization outside the class definition in C++."
+    },
+    {
+        "id": 57,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nclass Box{\n    int width;\npublic:\n    Box(int w) : width(w) {}\n    friend void printWidth(Box b);\n};\n\nvoid printWidth(Box b){\n    cout << \"Width: \" << b.width << endl;\n}\n\nint main(){\n    Box box(10);\n    printWidth(box);\n    return 0;\n}",
+        "output": "This program demonstrates a friend function that can access private members of a class without being a member itself. It shows the friend keyword for granting external access to private data in C++."
+    },
+    {
+        "id": 58,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main(){\n    vector<int> nums = {1, 2, 3, 4, 5};\n    int sum = 0;\n    for_each(nums.begin(), nums.end(), [&sum](int n){ sum += n; });\n    cout << \"Sum: \" << sum << endl;\n    \n    auto square = [](int x){ return x * x; };\n    cout << \"Square of 5: \" << square(5) << endl;\n    return 0;\n}",
+        "output": "This program demonstrates lambda expressions for inline function definitions, using one to calculate a sum and another to compute squares. It shows modern C++ lambda syntax with capture clauses in C++."
+    },
+    {
+        "id": 59,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <map>\nusing namespace std;\n\nint main(){\n    map<string, int> ages;\n    ages[\"Alice\"] = 25;\n    ages[\"Bob\"] = 30;\n    ages[\"Charlie\"] = 35;\n    \n    for(auto& pair : ages){\n        cout << pair.first << \": \" << pair.second << endl;\n    }\n    cout << \"Bob's age: \" << ages[\"Bob\"] << endl;\n    return 0;\n}",
+        "output": "This program creates a map to associate names with ages and demonstrates insertion, iteration, and lookup operations. It shows the use of STL map container for key-value storage in C++."
+    },
+    {
+        "id": 60,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <set>\nusing namespace std;\n\nint main(){\n    set<int> numbers;\n    numbers.insert(5);\n    numbers.insert(2);\n    numbers.insert(8);\n    numbers.insert(2);\n    \n    cout << \"Set elements: \";\n    for(int n : numbers){\n        cout << n << \" \";\n    }\n    cout << endl;\n    cout << \"Size: \" << numbers.size() << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the STL set container which stores unique elements in sorted order, automatically handling duplicates. It shows set insertion, iteration, and the property of maintaining uniqueness in C++."
+    },
+    {
+        "id": 61,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <utility>\nusing namespace std;\n\nint main(){\n    pair<string, int> student(\"John\", 85);\n    cout << \"Name: \" << student.first << endl;\n    cout << \"Score: \" << student.second << endl;\n    \n    auto p = make_pair(3.14, \"Pi\");\n    cout << p.first << \" is \" << p.second << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the use of std::pair to store two related values of different types together. It shows pair creation, access to first and second elements, and the make_pair utility function in C++."
+    },
+    {
+        "id": 62,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <tuple>\nusing namespace std;\n\nint main(){\n    tuple<string, int, double> person(\"Alice\", 25, 5.6);\n    cout << \"Name: \" << get<0>(person) << endl;\n    cout << \"Age: \" << get<1>(person) << endl;\n    cout << \"Height: \" << get<2>(person) << endl;\n    \n    auto [name, age, height] = person;\n    cout << name << \" is \" << age << \" years old.\" << endl;\n    return 0;\n}",
+        "output": "This program demonstrates std::tuple for storing multiple values of different types and uses structured bindings to unpack them. It shows tuple creation, element access with get<>, and modern C++17 decomposition syntax."
+    },
+    {
+        "id": 63,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int a = 5, b = 3;\n    cout << \"a & b = \" << (a & b) << endl;\n    cout << \"a | b = \" << (a | b) << endl;\n    cout << \"a ^ b = \" << (a ^ b) << endl;\n    cout << \"~a = \" << (~a) << endl;\n    cout << \"a << 1 = \" << (a << 1) << endl;\n    cout << \"a >> 1 = \" << (a >> 1) << endl;\n    return 0;\n}",
+        "output": "This program demonstrates various bitwise operations including AND, OR, XOR, NOT, left shift, and right shift on integers. It shows how bitwise operators manipulate individual bits in C++."
+    },
+    {
+        "id": 64,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int* arr = new int[5];\n    for(int i = 0; i < 5; i++){\n        arr[i] = i * 10;\n    }\n    cout << \"Dynamic array: \";\n    for(int i = 0; i < 5; i++){\n        cout << arr[i] << \" \";\n    }\n    cout << endl;\n    delete[] arr;\n    return 0;\n}",
+        "output": "This program creates a dynamic array using new, initializes it with values, and properly deallocates it with delete[]. It demonstrates dynamic memory allocation and deallocation for arrays in C++."
+    },
+    {
+        "id": 65,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main(){\n    unique_ptr<int> ptr = make_unique<int>(42);\n    cout << \"Value: \" << *ptr << endl;\n    \n    unique_ptr<int[]> arr = make_unique<int[]>(5);\n    for(int i = 0; i < 5; i++) arr[i] = i;\n    cout << \"Array[2]: \" << arr[2] << endl;\n    return 0;\n}",
+        "output": "This program demonstrates smart pointers using unique_ptr for automatic memory management of both single values and arrays. It shows modern C++ RAII-based memory handling that prevents memory leaks."
+    },
+    {
+        "id": 66,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string text = \"Hello World Programming\";\n    size_t pos = text.find(\"World\");\n    if(pos != string::npos){\n        cout << \"Found at position: \" << pos << endl;\n    }\n    string sub = text.substr(6, 5);\n    cout << \"Substring: \" << sub << endl;\n    return 0;\n}",
+        "output": "This program demonstrates string searching with find() and substring extraction with substr() on a sample text. It shows common string manipulation operations for text processing in C++."
+    },
+    {
+        "id": 67,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    string s1 = \"Hello\";\n    string s2 = \" World\";\n    string s3 = s1 + s2;\n    cout << s3 << endl;\n    \n    s1.append(\"!!!\");\n    cout << s1 << endl;\n    \n    s1 += \" C++\";\n    cout << s1 << endl;\n    return 0;\n}",
+        "output": "This program demonstrates multiple ways to concatenate strings including the + operator, append() method, and += operator. It shows various string concatenation techniques available in C++."
+    },
+    {
+        "id": 68,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int count = 0;\n    while(count < 5){\n        cout << \"Count: \" << count << endl;\n        count++;\n    }\n    return 0;\n}",
+        "output": "This program uses a while loop to print count values from 0 to 4, incrementing the counter each iteration. It demonstrates basic while loop syntax and loop control in C++."
+    },
+    {
+        "id": 69,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int num;\n    do{\n        cout << \"Enter a positive number: \";\n        cin >> num;\n    } while(num <= 0);\n    cout << \"You entered: \" << num << endl;\n    return 0;\n}",
+        "output": "This program uses a do-while loop to repeatedly prompt the user until they enter a positive number. It demonstrates input validation using a do-while loop that executes at least once in C++."
+    },
+    {
+        "id": 70,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    const int MAX_SIZE = 100;\n    const double PI = 3.14159;\n    \n    int arr[MAX_SIZE];\n    double circumference = 2 * PI * 5;\n    \n    cout << \"Circumference: \" << circumference << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the use of const variables for defining compile-time constants like array sizes and mathematical values. It shows how const ensures values cannot be modified after initialization in C++."
+    },
+    {
+        "id": 71,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nvoid modifyByPointer(int* p){\n    *p = 100;\n}\n\nvoid modifyByReference(int& r){\n    r = 200;\n}\n\nint main(){\n    int a = 10, b = 10;\n    modifyByPointer(&a);\n    modifyByReference(b);\n    cout << \"a: \" << a << \", b: \" << b << endl;\n    return 0;\n}",
+        "output": "This program compares passing variables by pointer versus by reference to modify their values in functions. It demonstrates both approaches for allowing functions to alter caller's variables in C++."
+    },
+    {
+        "id": 72,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\ninline int square(int x){\n    return x * x;\n}\n\ninline int cube(int x){\n    return x * x * x;\n}\n\nint main(){\n    cout << \"Square of 4: \" << square(4) << endl;\n    cout << \"Cube of 3: \" << cube(3) << endl;\n    return 0;\n}",
+        "output": "This program defines inline functions for calculating square and cube of a number to suggest compiler optimization. It demonstrates the inline keyword for potentially reducing function call overhead in C++."
+    },
+    {
+        "id": 73,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nvoid greet(string name = \"Guest\", int times = 1){\n    for(int i = 0; i < times; i++){\n        cout << \"Hello, \" << name << \"!\" << endl;\n    }\n}\n\nint main(){\n    greet();\n    greet(\"Alice\");\n    greet(\"Bob\", 3);\n    return 0;\n}",
+        "output": "This program demonstrates default function arguments by providing fallback values for optional parameters. It shows how functions can be called with fewer arguments when defaults are specified in C++."
+    },
+    {
+        "id": 74,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint add(int a, int b){\n    return a + b;\n}\n\ndouble add(double a, double b){\n    return a + b;\n}\n\nint add(int a, int b, int c){\n    return a + b + c;\n}\n\nint main(){\n    cout << add(5, 3) << endl;\n    cout << add(2.5, 3.7) << endl;\n    cout << add(1, 2, 3) << endl;\n    return 0;\n}",
+        "output": "This program demonstrates function overloading by defining multiple add functions with different parameter types and counts. It shows compile-time polymorphism through function signature differentiation in C++."
+    },
+    {
+        "id": 75,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nnamespace Math{\n    const double PI = 3.14159;\n    double circleArea(double r){\n        return PI * r * r;\n    }\n}\n\nnamespace Physics{\n    double velocity(double d, double t){\n        return d / t;\n    }\n}\n\nint main(){\n    cout << \"Circle area: \" << Math::circleArea(5) << endl;\n    cout << \"Velocity: \" << Physics::velocity(100, 10) << endl;\n    return 0;\n}",
+        "output": "This program organizes related functions and constants into separate namespaces for Math and Physics calculations. It demonstrates namespace usage for code organization and preventing naming conflicts in C++."
+    },
+    {
+        "id": 76,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <vector>\nusing namespace std;\n\ntypedef unsigned long ulong;\nusing IntVector = vector<int>;\n\nint main(){\n    ulong bigNum = 1234567890UL;\n    IntVector nums = {1, 2, 3, 4, 5};\n    \n    cout << \"Big number: \" << bigNum << endl;\n    cout << \"Vector size: \" << nums.size() << endl;\n    return 0;\n}",
+        "output": "This program demonstrates type aliasing using both typedef and the modern using keyword to create readable type names. It shows how to create custom type aliases for complex or lengthy type declarations in C++."
+    },
+    {
+        "id": 77,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <vector>\n#include <map>\nusing namespace std;\n\nint main(){\n    auto x = 42;\n    auto pi = 3.14159;\n    auto name = \"Hello\";\n    auto nums = vector<int>{1, 2, 3};\n    \n    map<string, int> ages = {{\"Alice\", 25}, {\"Bob\", 30}};\n    for(auto& [key, value] : ages){\n        cout << key << \": \" << value << endl;\n    }\n    return 0;\n}",
+        "output": "This program demonstrates the auto keyword for automatic type deduction of variables from their initializers. It shows how auto simplifies code by letting the compiler infer types in C++."
+    },
+    {
+        "id": 78,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main(){\n    vector<int> nums = {1, 2, 3, 4, 5};\n    \n    for(int& n : nums){\n        n *= 2;\n    }\n    \n    cout << \"Doubled: \";\n    for(const int& n : nums){\n        cout << n << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program uses range-based for loops with references to modify vector elements and const references for read-only iteration. It demonstrates efficient in-place modification and safe read access patterns in C++."
+    },
+    {
+        "id": 79,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    for(int i = 1; i <= 10; i++){\n        if(i == 5) continue;\n        if(i == 8) break;\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program demonstrates the break and continue statements to control loop execution flow. It shows how continue skips the current iteration and break exits the loop entirely in C++."
+    },
+    {
+        "id": 80,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int i = 0;\nstart:\n    if(i >= 5) goto end;\n    cout << i << \" \";\n    i++;\n    goto start;\nend:\n    cout << \"\\nDone!\" << endl;\n    return 0;\n}",
+        "output": "This program uses goto statements with labels to create a loop-like structure that prints numbers 0 to 4. It demonstrates the goto control flow statement, though its use is generally discouraged in modern C++."
+    },
+    {
+        "id": 81,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cassert>\nusing namespace std;\n\nint divide(int a, int b){\n    assert(b != 0 && \"Divisor cannot be zero\");\n    return a / b;\n}\n\nint main(){\n    cout << divide(10, 2) << endl;\n    cout << divide(15, 3) << endl;\n    return 0;\n}",
+        "output": "This program uses assert to validate that the divisor is not zero before performing division. It demonstrates defensive programming with runtime assertions for catching programming errors in C++."
+    },
+    {
+        "id": 82,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    cout << \"Size of char: \" << sizeof(char) << \" byte\" << endl;\n    cout << \"Size of int: \" << sizeof(int) << \" bytes\" << endl;\n    cout << \"Size of double: \" << sizeof(double) << \" bytes\" << endl;\n    \n    int arr[10];\n    cout << \"Size of array: \" << sizeof(arr) << \" bytes\" << endl;\n    cout << \"Number of elements: \" << sizeof(arr)/sizeof(arr[0]) << endl;\n    return 0;\n}",
+        "output": "This program uses the sizeof operator to display the memory size of various data types and calculate array element count. It demonstrates compile-time size determination for types and variables in C++."
+    },
+    {
+        "id": 83,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int score = 85;\n    string grade = (score >= 90) ? \"A\" :\n                   (score >= 80) ? \"B\" :\n                   (score >= 70) ? \"C\" :\n                   (score >= 60) ? \"D\" : \"F\";\n    cout << \"Score: \" << score << \", Grade: \" << grade << endl;\n    return 0;\n}",
+        "output": "This program uses nested ternary operators to assign a letter grade based on a numerical score. It demonstrates chained conditional expressions as an alternative to multiple if-else statements in C++."
+    },
+    {
+        "id": 84,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nstruct Book{\n    string title;\n    string author;\n    int year;\n};\n\nint main(){\n    Book library[3] = {\n        {\"1984\", \"Orwell\", 1949},\n        {\"Dune\", \"Herbert\", 1965},\n        {\"Foundation\", \"Asimov\", 1951}\n    };\n    \n    for(int i = 0; i < 3; i++){\n        cout << library[i].title << \" by \" << library[i].author << endl;\n    }\n    return 0;\n}",
+        "output": "This program creates an array of Book structures and iterates through it to display each book's information. It demonstrates using arrays of structures to organize related data collections in C++."
+    },
+    {
+        "id": 85,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {10, 20, 30, 40, 50};\n    int* ptr = arr;\n    \n    cout << \"Using pointer arithmetic:\" << endl;\n    for(int i = 0; i < 5; i++){\n        cout << \"*(ptr + \" << i << \") = \" << *(ptr + i) << endl;\n    }\n    \n    ptr = &arr[2];\n    cout << \"ptr[-1] = \" << ptr[-1] << endl;\n    return 0;\n}",
+        "output": "This program demonstrates pointer arithmetic to access array elements by adding offsets to a pointer. It shows how pointers and arrays are related through memory address manipulation in C++."
+    },
+    {
+        "id": 86,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int matrix[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    int sum = 0;\n    \n    for(int i = 0; i < 3; i++){\n        for(int j = 0; j < 3; j++){\n            sum += matrix[i][j];\n        }\n    }\n    cout << \"Sum of all elements: \" << sum << endl;\n    return 0;\n}",
+        "output": "This program calculates the sum of all elements in a 3x3 matrix using nested loops. It demonstrates 2D array traversal and element accumulation in C++."
+    },
+    {
+        "id": 87,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int A[2][2] = {{1,2}, {3,4}};\n    int B[2][2] = {{5,6}, {7,8}};\n    int C[2][2] = {0};\n    \n    for(int i = 0; i < 2; i++){\n        for(int j = 0; j < 2; j++){\n            for(int k = 0; k < 2; k++){\n                C[i][j] += A[i][k] * B[k][j];\n            }\n        }\n    }\n    \n    cout << \"Result matrix:\" << endl;\n    for(int i = 0; i < 2; i++){\n        for(int j = 0; j < 2; j++)\n            cout << C[i][j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}",
+        "output": "This program performs matrix multiplication on two 2x2 matrices and displays the resulting matrix. It demonstrates the triple nested loop algorithm for matrix multiplication in C++."
+    },
+    {
+        "id": 88,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nbool isPrime(int n){\n    if(n <= 1) return false;\n    for(int i = 2; i * i <= n; i++)\n        if(n % i == 0) return false;\n    return true;\n}\n\nint main(){\n    cout << \"Prime numbers between 1 and 50: \";\n    for(int i = 1; i <= 50; i++){\n        if(isPrime(i)) cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program finds and displays all prime numbers in the range from 1 to 50 using a helper function. It demonstrates prime number checking with trial division up to the square root in C++."
+    },
+    {
+        "id": 89,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {64, 25, 12, 22, 11};\n    int n = 5;\n    \n    for(int i = 0; i < n-1; i++){\n        int minIdx = i;\n        for(int j = i+1; j < n; j++)\n            if(arr[j] < arr[minIdx])\n                minIdx = j;\n        swap(arr[minIdx], arr[i]);\n    }\n    \n    cout << \"Sorted array: \";\n    for(int i = 0; i < n; i++) cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program implements the selection sort algorithm by repeatedly finding the minimum element and placing it at the beginning. It demonstrates an in-place comparison sorting technique in C++."
+    },
+    {
+        "id": 90,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {12, 11, 13, 5, 6};\n    int n = 5;\n    \n    for(int i = 1; i < n; i++){\n        int key = arr[i];\n        int j = i - 1;\n        while(j >= 0 && arr[j] > key){\n            arr[j + 1] = arr[j];\n            j--;\n        }\n        arr[j + 1] = key;\n    }\n    \n    cout << \"Sorted array: \";\n    for(int i = 0; i < n; i++) cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program implements the insertion sort algorithm by building a sorted portion one element at a time. It demonstrates an adaptive sorting technique that works well for nearly sorted data in C++."
+    },
+    {
+        "id": 91,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr1[] = {1, 3, 5, 7};\n    int arr2[] = {2, 4, 6, 8};\n    int merged[8];\n    int i = 0, j = 0, k = 0;\n    \n    while(i < 4 && j < 4){\n        if(arr1[i] <= arr2[j])\n            merged[k++] = arr1[i++];\n        else\n            merged[k++] = arr2[j++];\n    }\n    while(i < 4) merged[k++] = arr1[i++];\n    while(j < 4) merged[k++] = arr2[j++];\n    \n    cout << \"Merged array: \";\n    for(int x = 0; x < 8; x++) cout << merged[x] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program merges two sorted arrays into a single sorted array by comparing elements from both arrays. It demonstrates the merge operation used in merge sort algorithm in C++."
+    },
+    {
+        "id": 92,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <algorithm>\nusing namespace std;\n\nint main(){\n    int arr[] = {1, 2, 2, 3, 3, 3, 4, 5, 5};\n    int n = 9;\n    \n    int* newEnd = unique(arr, arr + n);\n    int newSize = newEnd - arr;\n    \n    cout << \"After removing duplicates: \";\n    for(int i = 0; i < newSize; i++)\n        cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program removes consecutive duplicate elements from a sorted array using the STL unique algorithm. It demonstrates in-place duplicate removal and iterator arithmetic in C++."
+    },
+    {
+        "id": 93,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {12, 35, 1, 10, 34, 1};\n    int n = 6;\n    int first = INT_MIN, second = INT_MIN;\n    \n    for(int i = 0; i < n; i++){\n        if(arr[i] > first){\n            second = first;\n            first = arr[i];\n        } else if(arr[i] > second && arr[i] != first){\n            second = arr[i];\n        }\n    }\n    cout << \"Second largest: \" << second << endl;\n    return 0;\n}",
+        "output": "This program finds the second largest element in an array by tracking both the largest and second largest values. It demonstrates efficient single-pass array scanning with two tracking variables in C++."
+    },
+    {
+        "id": 94,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int arr[] = {1, 2, 3, 4, 5};\n    int n = 5, k = 2;\n    \n    for(int i = 0; i < k; i++){\n        int last = arr[n-1];\n        for(int j = n-1; j > 0; j--)\n            arr[j] = arr[j-1];\n        arr[0] = last;\n    }\n    \n    cout << \"Array after rotating right by \" << k << \": \";\n    for(int i = 0; i < n; i++) cout << arr[i] << \" \";\n    cout << endl;\n    return 0;\n}",
+        "output": "This program rotates an array to the right by k positions using a simple shifting approach. It demonstrates array rotation through element shifting in C++."
+    },
+    {
+        "id": 95,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main(){\n    int decimal = 25;\n    string binary = \"\";\n    int temp = decimal;\n    \n    while(temp > 0){\n        binary = (temp % 2 == 0 ? \"0\" : \"1\") + binary;\n        temp /= 2;\n    }\n    \n    cout << decimal << \" in binary: \" << binary << endl;\n    return 0;\n}",
+        "output": "This program converts a decimal number to its binary representation by repeatedly dividing by 2 and collecting remainders. It demonstrates number base conversion using the division method in C++."
+    },
+    {
+        "id": 96,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    string binary = \"11001\";\n    int decimal = 0;\n    int len = binary.length();\n    \n    for(int i = 0; i < len; i++){\n        if(binary[i] == '1')\n            decimal += pow(2, len - 1 - i);\n    }\n    \n    cout << binary << \" in decimal: \" << decimal << endl;\n    return 0;\n}",
+        "output": "This program converts a binary string to its decimal equivalent by summing powers of 2 for each set bit. It demonstrates binary to decimal conversion using positional notation in C++."
+    },
+    {
+        "id": 97,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b){\n    return b == 0 ? a : gcd(b, a % b);\n}\n\nint lcm(int a, int b){\n    return (a * b) / gcd(a, b);\n}\n\nint main(){\n    int num1 = 12, num2 = 18;\n    cout << \"LCM of \" << num1 << \" and \" << num2 << \": \" << lcm(num1, num2) << endl;\n    return 0;\n}",
+        "output": "This program calculates the Least Common Multiple (LCM) of two numbers using the relationship between LCM and GCD. It demonstrates the mathematical formula LCM(a,b) = (a*b)/GCD(a,b) in C++."
+    },
+    {
+        "id": 98,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nbool isLeapYear(int year){\n    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);\n}\n\nint main(){\n    int years[] = {2000, 2020, 2021, 2100};\n    for(int year : years){\n        cout << year << (isLeapYear(year) ? \" is\" : \" is not\") << \" a leap year\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program determines whether given years are leap years using the standard leap year rules. It demonstrates the divisibility conditions for leap year calculation in C++."
+    },
+    {
+        "id": 99,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    double num1, num2;\n    char op;\n    cout << \"Enter expression (e.g., 5 + 3): \";\n    cin >> num1 >> op >> num2;\n    \n    switch(op){\n        case '+': cout << num1 + num2 << endl; break;\n        case '-': cout << num1 - num2 << endl; break;\n        case '*': cout << num1 * num2 << endl; break;\n        case '/': cout << (num2 != 0 ? num1/num2 : 0) << endl; break;\n        default: cout << \"Invalid operator\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program implements a simple calculator that takes an arithmetic expression and evaluates it based on the operator. It demonstrates a switch-case based calculator with basic arithmetic operations in C++."
+    },
+    {
+        "id": 100,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    int age;\n    cout << \"Enter your age: \";\n    cin >> age;\n    \n    if(age < 0)\n        cout << \"Invalid age\" << endl;\n    else if(age < 13)\n        cout << \"Child\" << endl;\n    else if(age < 20)\n        cout << \"Teenager\" << endl;\n    else if(age < 60)\n        cout << \"Adult\" << endl;\n    else\n        cout << \"Senior\" << endl;\n    return 0;\n}",
+        "output": "This program categorizes a person into age groups (Child, Teenager, Adult, Senior) based on their input age. It demonstrates multi-branch conditional logic using if-else chains in C++."
+    },
+    {
+        "id": 101,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    double a = 1, b = -5, c = 6;\n    double discriminant = b*b - 4*a*c;\n    \n    if(discriminant > 0){\n        double x1 = (-b + sqrt(discriminant)) / (2*a);\n        double x2 = (-b - sqrt(discriminant)) / (2*a);\n        cout << \"Roots: \" << x1 << \" and \" << x2 << endl;\n    } else if(discriminant == 0){\n        cout << \"Root: \" << -b/(2*a) << endl;\n    } else {\n        cout << \"No real roots\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program solves a quadratic equation using the quadratic formula and handles all three discriminant cases. It demonstrates mathematical computation with different root scenarios in C++."
+    },
+    {
+        "id": 102,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    double radius = 5, length = 10, width = 4, base = 6, height = 8;\n    \n    double circleArea = M_PI * radius * radius;\n    double rectangleArea = length * width;\n    double triangleArea = 0.5 * base * height;\n    \n    cout << \"Circle area: \" << circleArea << endl;\n    cout << \"Rectangle area: \" << rectangleArea << endl;\n    cout << \"Triangle area: \" << triangleArea << endl;\n    return 0;\n}",
+        "output": "This program calculates the areas of a circle, rectangle, and triangle using their respective formulas. It demonstrates geometric calculations with different shape formulas in C++."
+    },
+    {
+        "id": 103,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint main(){\n    double principal = 1000;\n    double rate = 5;\n    double time = 2;\n    \n    double simpleInterest = (principal * rate * time) / 100;\n    double amount = principal + simpleInterest;\n    \n    cout << \"Principal: $\" << principal << endl;\n    cout << \"Simple Interest: $\" << simpleInterest << endl;\n    cout << \"Total Amount: $\" << amount << endl;\n    return 0;\n}",
+        "output": "This program calculates simple interest and the total amount using the formula SI = (P×R×T)/100. It demonstrates basic financial calculations for interest computation in C++."
+    },
+    {
+        "id": 104,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    double principal = 1000;\n    double rate = 5;\n    int time = 2;\n    int n = 12;\n    \n    double amount = principal * pow((1 + rate/(100*n)), n*time);\n    double compoundInterest = amount - principal;\n    \n    cout << \"Compound Interest: $\" << compoundInterest << endl;\n    cout << \"Total Amount: $\" << amount << endl;\n    return 0;\n}",
+        "output": "This program calculates compound interest with monthly compounding using the formula A = P(1 + r/n)^(nt). It demonstrates compound interest calculation for financial applications in C++."
+    },
+    {
+        "id": 105,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint countDigits(int n){\n    int count = 0;\n    while(n != 0){\n        count++;\n        n /= 10;\n    }\n    return count;\n}\n\nint main(){\n    int num = 12345;\n    cout << \"Number: \" << num << endl;\n    cout << \"Number of digits: \" << countDigits(num) << endl;\n    return 0;\n}",
+        "output": "This program counts the number of digits in an integer by repeatedly dividing by 10 until the number becomes zero. It demonstrates digit counting using integer division in C++."
+    },
+    {
+        "id": 106,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint sumOfDigits(int n){\n    int sum = 0;\n    while(n > 0){\n        sum += n % 10;\n        n /= 10;\n    }\n    return sum;\n}\n\nint main(){\n    int num = 12345;\n    cout << \"Sum of digits of \" << num << \": \" << sumOfDigits(num) << endl;\n    return 0;\n}",
+        "output": "This program calculates the sum of all digits in a number by extracting each digit using modulo and division operations. It demonstrates digit extraction and summation in C++."
+    },
+    {
+        "id": 107,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nint reverseNumber(int n){\n    int reversed = 0;\n    while(n > 0){\n        reversed = reversed * 10 + n % 10;\n        n /= 10;\n    }\n    return reversed;\n}\n\nint main(){\n    int num = 12345;\n    cout << \"Original: \" << num << endl;\n    cout << \"Reversed: \" << reverseNumber(num) << endl;\n    return 0;\n}",
+        "output": "This program reverses the digits of an integer by extracting digits from the end and building a new number. It demonstrates number reversal using arithmetic operations in C++."
+    },
+    {
+        "id": 108,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nbool isPerfectSquare(int n){\n    if(n < 0) return false;\n    int root = sqrt(n);\n    return root * root == n;\n}\n\nint main(){\n    int nums[] = {16, 25, 26, 36, 50};\n    for(int n : nums){\n        cout << n << (isPerfectSquare(n) ? \" is\" : \" is not\") << \" a perfect square\" << endl;\n    }\n    return 0;\n}",
+        "output": "This program checks whether given numbers are perfect squares by comparing the square of their integer square root with the original number. It demonstrates perfect square validation using mathematical properties in C++."
+    },
+    {
+        "id": 109,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\nusing namespace std;\n\nunsigned long long factorial(int n){\n    unsigned long long result = 1;\n    for(int i = 2; i <= n; i++){\n        result *= i;\n    }\n    return result;\n}\n\nint main(){\n    for(int i = 0; i <= 10; i++){\n        cout << i << \"! = \" << factorial(i) << endl;\n    }\n    return 0;\n}",
+        "output": "This program calculates and displays factorials from 0 to 10 using an iterative function with unsigned long long for large results. It demonstrates factorial computation with proper handling of large numbers in C++."
+    },
+    {
+        "id": 110,
+        "instruction": "Summarize the purpose of this C++ code in one or two sentences.",
+        "input": "#include <iostream>\n#include <cstdlib>\n#include <ctime>\nusing namespace std;\n\nint main(){\n    srand(time(0));\n    \n    cout << \"5 random numbers between 1 and 100:\" << endl;\n    for(int i = 0; i < 5; i++){\n        int randomNum = rand() % 100 + 1;\n        cout << randomNum << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+        "output": "This program generates and displays five random numbers between 1 and 100 using the rand() function seeded with current time. It demonstrates random number generation with range limiting using the modulo operator in C++."
+    }
+]
